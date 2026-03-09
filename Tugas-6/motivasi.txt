@@ -1,0 +1,1 @@
+Ingin mengingat ulang dan lebih mendalami pembuatan website dengan menggunakan Laravel. Diharapkan setelah mengikuti bootcamp akan mahir dalam pembuatan website baik untuk keperluan pribadi maupun dalam pekerjaan.
