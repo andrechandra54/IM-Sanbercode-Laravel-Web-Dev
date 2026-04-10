@@ -3,7 +3,7 @@
     List Category
 @endsection
 @section('content')
-    <a href="/category/create" class="btn btn-primary btn-sm">Add Category</a>
+    <a href="/category/create" class="btn btn-primary btn-sm">Add New Category</a>
 
     @if (session('success'))
 
@@ -48,5 +48,5 @@
         </tbody>
     </table>
 
-    <a href="/category" class="btn btn-secondary btn-sm">Return</a>
+    <a href="/" class="btn btn-secondary btn-sm">Return</a>
 @endsection

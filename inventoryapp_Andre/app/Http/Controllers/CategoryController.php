@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Models\Categories;
 
 class CategoryController extends Controller
 {
@@ -17,9 +18,6 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required|min:3',
             'description' => 'required'
-        ], [
-            'required' => ":attribute wajib diisi",
-            'min' => ":attribute minimal :min karakter"
         ]);
 
         $now = Carbon::now();
@@ -45,7 +43,7 @@ class CategoryController extends Controller
 
     public function show($id) {
 
-        $category = DB::table('categories')->find($id);
+        $category = Categories::find($id);
 
         return view('category.detail', ['category' => $category]);
 
@@ -64,9 +62,6 @@ class CategoryController extends Controller
         $request->validate([
             'name' => 'required|min:3',
             'description' => 'required'
-        ], [
-            'required' => ":attribute wajib diisi",
-            'min' => ":attribute minimal :min karakter"
         ]);
 
         $now = Carbon::now();
